@@ -1,0 +1,37 @@
+{
+  "ParsedResults": [
+    {
+      "TextOverlay": {
+        "Lines": [
+          {
+            "Words": [
+              { "WordText": "Hello", "Left": 10, "Top": 10, "Width": 50, "Height": 20 },
+              { "WordText": "World", "Left": 70, "Top": 11, "Width": 55, "Height": 20 }
+            ],
+            "MaxHeight": 20,
+            "MinTop": 10
+          },
+          {
+            "Words": [
+              { "WordText": "Line", "Left": 10, "Top": 50, "Width": 40, "Height": 20 },
+              { "WordText": "Two", "Left": 60, "Top": 51, "Width": 35, "Height": 20 }
+            ],
+            "MaxHeight": 20,
+            "MinTop": 50
+          }
+        ],
+        "HasOverlay": true
+      },
+      "FileParseExitCode": 1,
+      "ParsedText": "Hello World\nLine Two",
+      "ErrorMessage": null,
+      "ErrorDetails": null
+    }
+  ],
+  "OCRExitCode": 1,
+  "IsErroredOnProcessing": false,
+  "ErrorMessage": null,
+  "ErrorDetails": null,
+  "ProcessingTimeInMilliseconds": "30"
+}
+

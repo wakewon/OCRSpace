@@ -1,0 +1,35 @@
+{
+  "ParsedResults": [
+    {
+      "TextOverlay": {
+        "Lines": [
+          {
+            "Words": [
+              { "WordText": "「俺が?」", "Left": 375, "Top": 78, "Width": 24, "Height": 14 }
+            ]
+          },
+          {
+            "Words": [
+              { "WordText": "すると美和は尾上の顔をじっと覗き込んだ。無言のまま、不自然なくらい長く。", "Left": 143, "Top": 78, "Width": 288, "Height": 14 }
+            ]
+          },
+          {
+            "Words": [
+              { "WordText": "「どうした?」と尾上は尋ねた。", "Left": 375, "Top": 98, "Width": 56, "Height": 14 }
+            ]
+          }
+        ],
+        "HasOverlay": true
+      },
+      "FileParseExitCode": 1,
+      "ParsedText": "「俺が?」\nすると美和は尾上の顔をじっと覗き込んだ。無言のまま、不自然なくらい長く。\n「どうした?」と尾上は尋ねた。",
+      "ErrorMessage": null,
+      "ErrorDetails": null
+    }
+  ],
+  "OCRExitCode": 1,
+  "IsErroredOnProcessing": false,
+  "ErrorMessage": null,
+  "ErrorDetails": null
+}
+

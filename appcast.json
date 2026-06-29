@@ -1,0 +1,13 @@
+{
+  "identifier": "com.github.wakewon.ocrspace.ocr",
+  "versions": [
+    {
+      "version": "0.1.0",
+      "desc": "Initial release: OCR.space Engine 1/2/3, Bob image translation bounding boxes, and vertical Japanese layout support.",
+      "sha256": "d4657054331da24a347982033c81113e725227b63b6088e49b93ec387d229751",
+      "url": "https://github.com/wakewon/OCRSpace/releases/download/v0.1.0/OCRSpaceOCR-v0.1.0.bobplugin",
+      "minBobVersion": "1.20.0",
+      "timestamp": 1782734148000
+    }
+  ]
+}

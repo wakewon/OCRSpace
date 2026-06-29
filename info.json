@@ -1,0 +1,132 @@
+{
+  "identifier": "com.github.wakewon.ocrspace.ocr",
+  "version": "0.1.0",
+  "category": "ocr",
+  "name": "OCR.space 文字识别",
+  "summary": "基于 OCR.space 的 Bob OCR 插件，支持 Engine 1/2/3、原图翻译位置框和竖排从右到左重排。语言设置完全遵循 Bob 标准。",
+  "icon": "icon.png",
+  "author": "wakewon",
+  "homepage": "https://github.com/wakewon/OCRSpace",
+  "tutorial": "https://github.com/wakewon/OCRSpace#readme",
+  "appcast": "https://github.com/wakewon/OCRSpace/raw/main/appcast.json",
+  "minBobVersion": "1.20.0",
+  "options": [
+    {
+      "identifier": "apiKey",
+      "type": "text",
+      "title": "OCR.space API Key",
+      "desc": "必填。支持用英文逗号分隔多个 Key，插件会在每次请求时随机选择一个。",
+      "textConfig": {
+        "type": "secure",
+        "height": 40,
+        "placeholderText": "请输入 OCR.space API Key"
+      }
+    },
+    {
+      "identifier": "engine",
+      "type": "menu",
+      "title": "OCR 引擎",
+      "defaultValue": "1",
+      "desc": "OCR.space 识别引擎。Engine 1 速度最快、位置框最细致；Engine 2 自动语言和较好坐标；Engine 3 准确率最高但速度较慢。建议首选 Engine 1。",
+      "menuValues": [
+        { "title": "Engine 1 - 速度与位置框优先", "value": "1" },
+        { "title": "Engine 2 - 自动语言和较好坐标", "value": "2" },
+        { "title": "Engine 3 - 准确率优先（较慢）", "value": "3" }
+      ]
+    },
+    {
+      "identifier": "layoutMode",
+      "type": "menu",
+      "title": "版面模式",
+      "defaultValue": "auto",
+      "desc": "控制 OCR.space TextOverlay 的阅读顺序重建方式。",
+      "menuValues": [
+        { "title": "自动", "value": "auto" },
+        { "title": "信任 OCR.space 顺序", "value": "service" },
+        { "title": "横排文本", "value": "horizontal" },
+        { "title": "竖排从右到左", "value": "vertical_rl" }
+      ]
+    },
+    {
+      "identifier": "overlay",
+      "type": "menu",
+      "title": "文字坐标",
+      "defaultValue": "true",
+      "desc": "请求 word 级坐标。Bob 原图翻译位置框和竖排重排需要开启此项。",
+      "menuValues": [
+        { "title": "开启", "value": "true" },
+        { "title": "关闭", "value": "false" }
+      ]
+    },
+    {
+      "identifier": "scale",
+      "type": "menu",
+      "title": "低清增强",
+      "defaultValue": "false",
+      "desc": "让 OCR.space 尝试增强低分辨率图片。",
+      "menuValues": [
+        { "title": "开启", "value": "true" },
+        { "title": "关闭", "value": "false" }
+      ]
+    },
+    {
+      "identifier": "detectOrientation",
+      "type": "menu",
+      "title": "方向检测",
+      "defaultValue": "false",
+      "desc": "OCR.space 自动方向校正。竖排书页建议关闭，因为竖排是版面，不是旋转。",
+      "menuValues": [
+        { "title": "关闭", "value": "false" },
+        { "title": "开启", "value": "true" }
+      ]
+    },
+    {
+      "identifier": "isTable",
+      "type": "menu",
+      "title": "表格模式",
+      "defaultValue": "false",
+      "desc": "识别收据、表格等结构化图片时可开启。",
+      "menuValues": [
+        { "title": "关闭", "value": "false" },
+        { "title": "开启", "value": "true" }
+      ]
+    }
+  ],
+  "_disabled_options": [
+    {
+      "identifier": "timeout",
+      "type": "text",
+      "title": "超时时间（秒）",
+      "defaultValue": "120",
+      "desc": "Bob 插件超时时间。取值会被限制在 30 到 300 秒之间。",
+      "textConfig": {
+        "type": "visible",
+        "height": 40,
+        "placeholderText": "120"
+      }
+    },
+    {
+      "identifier": "extraBody",
+      "type": "text",
+      "title": "额外请求体 JSON",
+      "defaultValue": "{}",
+      "desc": "可选。JSON 对象，会合并到 OCR.space 表单字段中，用于高级参数。",
+      "textConfig": {
+        "type": "visible",
+        "height": 120,
+        "placeholderText": "{}"
+      }
+    },
+    {
+      "identifier": "returnRaw",
+      "type": "menu",
+      "title": "返回原始响应",
+      "defaultValue": "false",
+      "desc": "调试时将 OCR.space 原始 JSON 附加到 Bob 结果中。",
+      "menuValues": [
+        { "title": "关闭", "value": "false" },
+        { "title": "开启", "value": "true" }
+      ]
+    }
+  ]
+}
